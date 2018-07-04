@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+  <!-- BOOTSTRAP CDN -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+
+
+<!-- JQuery CDN -->
+
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+
+  <script  src="main.js"></script> 
+
+
+    <!-- Bootstrap CDN -->
+   
+    
+
+    <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;}
+                           
+             th, td { padding: 10px;}
+             th {text-align: left;}
+                
+          
+    </style>
+
+
+
+</head>
+<body>
+
+<div style="margin-left:20%">
+     <h1> Students Info here</h1>  
+
+
+<br> <br>
+<table style="width:60%">
+ 
+   <tr>
+      <th>FullName</th>
+      <th>Department</th>
+      <th>ID</th>
+      <th>Batch</th>
+      <th>Subject </th>
+      <th>Attendence </th>
+      <th>Tests Score </th>
+      <th>Mid Score </th>
+      <th>Annual Score </th>
+      <th>Sessional Result</th>
+      <th>Delete User</th>
+ 
+    </tr>
+  
+    <% users.forEach( c => { %>
+    <tr>
+      <td> <%= c.fullname %></td>  
+      <td> <%= c.department %></td>  
+      <td> <%= c.roll %></td>  
+      <td> <%= c.batch %></td>   
+      <td> <%= c.subject %></td>   
+      <td> <%= c.attendence %></td>   
+      <td> <%= c.test %></td>  
+      <td> <%= c.mid %></td>
+      <td> <%= c.final %></td>
+      <td> <%= c.result %></td>  
+       
+      <td> <button  class= "deleteUser"  data-id = "<%= c._id%>"> delete </button></td>  
+    </tr>
+      <%  }) %>
+  </table>
+
+<br>
+<br>
+  <div > <a href="/">Go back to the first route </a> </div>
+
+
+
+ </div>
+  
+</body>
+</html>
